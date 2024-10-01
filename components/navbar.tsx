@@ -4,11 +4,12 @@ import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 import { useAnimate, motion, AnimationScope } from "framer-motion";
 import { FiMenu, FiArrowUpRight } from "react-icons/fi";
 import useMeasure from "react-use-measure";
+import Link from "next/link";
 
 const Example = () => {
   return (
     <section
-      className="relative h-[8vh] w-full overflow-hidden "
+      className=" h-[13vh] w-full "
       // style={{
       //   backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23171717'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`,
       // }}
@@ -60,11 +61,12 @@ const GlassNavigation = () => {
       className="glass-nav fixed left-0 right-0 top-0 z-10 mx-auto max-w-6xl overflow-hidden border-[1px] border-black/10  from-black/20 to-black/5 backdrop-blur md:left-6 md:right-6 md:top-6 md:rounded-2xl"
     >
       <div className="glass-nav flex items-center justify-between px-5 py-5">
+      <Logo /> 
         <Cursor hovered={hovered} scope={scope} />
 
         <Links />
 
-        <Logo />
+      
 
         <Buttons setMenuOpen={setMenuOpen} />
       </div>
@@ -99,24 +101,28 @@ const Cursor = ({
   );
 };
 
-const Logo = () => (
-  <span className="pointer-events-none relative left-0 top-[50%] z-10 text-4xl font-black text-black mix-blend-overlay md:absolute md:left-[50%] md:-translate-x-[50%] md:-translate-y-[50%]">
+const Logo = () => {
+  
+  return(
+    <Link href="/" className=" relative left-0 top-[50%] z-10 text-4xl font-black text-black mix-blend-overlay  ">
+  {/* <span onClick={ ()=>router.push("/me")} className="pointer-events-none relative left-0 top-[50%] z-10 text-4xl font-black text-black mix-blend-overlay md:absolute md:left-[50%] md:-translate-x-[50%] md:-translate-y-[50%]"> */}
     logo.
-  </span>
-);
+  </Link>)
+};
 
 const Links = () => (
   <div className="hidden items-center gap-2 md:flex">
-    <GlassLink text="Products" />
-    <GlassLink text="History" />
-    <GlassLink text="Contact" />
+   
+    <GlassLink text="About Us" Link="about" />
+    <GlassLink text="Contact" Link="contact"  />
+    <GlassLink text="Testimonials" Link="testimonials" />
   </div>
 );
 
-const GlassLink = ({ text }: { text: string }) => {
+const GlassLink = ({ text,Link }: { text: string ,Link: string}) => {
   return (
     <a
-      href={text}
+      href={Link}
       className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95"
     >
       <span className="relative z-10 text-black/90 transition-colors group-hover:text-black">
