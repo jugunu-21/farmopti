@@ -116,7 +116,7 @@ const Links = () => (
 const GlassLink = ({ text }: { text: string }) => {
   return (
     <a
-      href="#"
+      href={text}
       className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95"
     >
       <span className="relative z-10 text-black/90 transition-colors group-hover:text-black">
