@@ -3,9 +3,9 @@ import {
     animate,
     useMotionTemplate,
     useMotionValue,
-    motion,
     MotionConfig,
   } from "framer-motion";
+  import { motion } from 'framer-motion';
   import React, {
     Dispatch,
     SetStateAction,
