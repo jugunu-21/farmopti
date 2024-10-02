@@ -1,337 +1,151 @@
-"use client"
-import {
-    animate,
-    useMotionTemplate,
-    useMotionValue,
-    MotionConfig,
-  } from "framer-motion";
-  import { motion } from 'framer-motion';
-  import React, {
-    Dispatch,
-    SetStateAction,
-    useState,
-    useEffect,
-    MouseEventHandler,
-  } from "react";
-  import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
-  import { SiShopify } from "react-icons/si";
-  import { twMerge } from "tailwind-merge";
-  
-  export const FiftyFiftyHero = () => {
-    return (
-      <section className="mx-auto my-6 grid max-w-5xl grid-cols-12 border border-neutral-700 bg-neutral-900 text-neutral-50">
-        <Left />
-        <Right />
-      </section>
-    );
-  };
-  
-  const Left = () => (
-    <div className="col-span-12 flex flex-col justify-between border-r border-neutral-700 md:col-span-6">
-      <div className="px-6 py-20 md:px-12 md:py-24" 
-      // style={{
-                
-      //               backgroundImage: "url('/Different Love.svg')",
-      //               backgroundSize: 'cover',
-      //               backgroundPosition: 'center',
-      //               backgroundRepeat: 'no-repeat',
-                   
-      //             }
-                  
-      //           }
-                >
-        <h1 className="text-2xl uppercase  text-green-300 leading-tight md:text-3xl md:leading-tight">
-          <span className="text-amber-300 ">AI-Powered Crop Insights </span>
-         for Sustainable Farming Success.
-        </h1>
+import Gradientbutton from "@/lib/ui/button";
+import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+
+const ShuffleHero = () => {
+  return (
+    <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
+      <div>
+        <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
+          Optimizing Farming Through AI
+        </span>
+        <h3 className="text-2xl md:text-4xl font-semibold">
+          Revolutionize Crop Yield Prediction and Resource Optimization
+        </h3>
+        <p className="text-base md:text-lg text-slate-700 my-4 md:my-6">
+          Harnessing AI and machine learning to predict crop yields, optimize planting schedules, and monitor soil health. Real-time insights for farmers to optimize water usage, fertilizers, and planting practices.
+        </p>
+        {/* <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
+          Start Optimizing Today
+        </button> */}
+        <Gradientbutton text=" Start Optimizing Today" cta="contact" className=""/>
       </div>
-      <BeamInput />
+      <ShuffleGrid />
+    </section>
+  );
+};
+
+
+const shuffle = (array: (typeof squareData)[0][]) => {
+  let currentIndex = array.length,
+    randomIndex;
+
+  while (currentIndex != 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
+  }
+
+  return array;
+};
+
+const squareData = [
+  {
+    id: 1,
+    src: "https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+  },
+  {
+    id: 2,
+    src: "https://images.unsplash.com/photo-1510925758641-869d353cecc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+  },
+  {
+    id: 3,
+    src: "https://images.unsplash.com/photo-1629901925121-8a141c2a42f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+  },
+  {
+    id: 4,
+    src: "https://images.unsplash.com/photo-1580238053495-b9720401fd45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+  },
+  {
+    id: 5,
+    src: "https://images.unsplash.com/photo-1569074187119-c87815b476da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80",
+  },
+  {
+    id: 6,
+    src: "https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+  },
+  {
+    id: 7,
+    src: "https://images.unsplash.com/photo-1599586120429-48281b6f0ece?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+  },
+  {
+    id: 8,
+    src: "https://plus.unsplash.com/premium_photo-1671436824833-91c0741e89c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+  },
+  {
+    id: 9,
+    src: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+  },
+  {
+    id: 10,
+    src: "https://images.unsplash.com/photo-1610768764270-790fbec18178?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+  },
+  {
+    id: 11,
+    src: "https://images.unsplash.com/photo-1507034589631-9433cc6bc453?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=684&q=80",
+  },
+  {
+    id: 12,
+    src: "https://images.unsplash.com/photo-1533107862482-0e6974b06ec4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80",
+  },
+  {
+    id: 13,
+    src: "/Satisfied Farmer Fields (1).jpg",
+  },
+  {
+    id: 14,
+    src: "/Money Crops by Michelle Spollen.jpg",
+  },
+  {
+    id: 15,
+    src: "/Jean Wimmerlin from Unsplash.jpg",
+  },
+  {
+    id: 16,
+    src: "/Satisfied Farmer Fields.jpg",
+  },
+];
+
+const generateSquares = () => {
+  return shuffle(squareData).map((sq) => (
+    <motion.div
+      key={sq.id}
+      layout
+      transition={{ duration: 1.5, type: "spring" }}
+      className="w-full h-full"
+      style={{
+        backgroundImage: `url(${sq.src})`,
+        backgroundSize: "cover",
+      }}
+    ></motion.div>
+  ));
+};
+
+const ShuffleGrid = () => {
+  const timeoutRef = useRef<any>(null);
+  const [squares, setSquares] = useState(generateSquares());
+
+  useEffect(() => {
+    shuffleSquares();
+
+    return () => clearTimeout(timeoutRef.current);
+  }, []);
+
+  const shuffleSquares = () => {
+    setSquares(generateSquares());
+
+    timeoutRef.current = setTimeout(shuffleSquares, 3000);
+  };
+
+  return (
+    <div className="grid grid-cols-4 grid-rows-4 h-[450px] gap-1">
+      {squares.map((sq) => sq)}
     </div>
   );
-  
-  const BeamInput = () => {
-    const turn = useMotionValue(0);
-  
-    useEffect(() => {
-      animate(turn, 1, {
-        ease: "linear",
-        duration: 5,
-        repeat: Infinity,
-      });
-    }, []);
-  
-    const backgroundImage = useMotionTemplate`conic-gradient(from ${turn}turn, #6EE7B700 75%, #6EE7B7 100%)`;
-  
-    return (
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-        }}
-        className="relative z-30 flex w-full items-center gap-2 border-t border-neutral-700 bg-neutral-950 py-1.5 pl-6 pr-1.5"
-      >
-        <input
-          type="email"
-          placeholder="Enter your email to Connnect with Us"
-          className="w-full bg-transparent text-sm text-white placeholder-neutral-500 focus:outline-0"
-        />
-  
-        <button
-          onClick={(e) => e.stopPropagation()}
-          type="submit"
-          className="group flex shrink-0 items-center gap-1.5 bg-emerald-300 px-4 py-3 text-sm font-medium text-neutral-900 transition-transform active:scale-[0.985]"
-        >
-          <span>Join Farmopti</span>
-          <FiArrowRight className="-mr-4 opacity-0 transition-all group-hover:-mr-0 group-hover:opacity-100" />
-        </button>
-  
-        {/* <div className="pointer-events-none absolute inset-0 z-10">
-          <motion.div
-            style={{
-              backgroundImage,
-            }}
-            className="mask-with-browser-support absolute -inset-[1px] border border-transparent bg-origin-border"
-          />
-        </div> */}
-      </form>
-    );
-  };
-  
-  const Right = () => {
-    const [idx, setIdx] = useState(0);
-  
-    return (
-      <div className="col-span-12 flex flex-col justify-between md:col-span-6">
-        <div className="relative h-[276px] overflow-hidden md:h-[372px]" >
-          {CONTENT.map((c, itemIdx) => {
-            return (
-              <motion.div
-                initial={false}
-                animate={{
-                  opacity: idx === itemIdx ? 1 : 0,
-                  y: idx === itemIdx ? 0 : 24,
-                  filter: idx === itemIdx ? "blur(0px)" : "blur(2px)",
-                }}
-                transition={{
-                  ease: "easeInOut",
-                  duration: 0.3,
-                }}
-               
-                className="absolute inset-0 z-10 grid place-content-center space-y-3 px-6 text-base font-light leading-relaxed text-neutral-400 md:px-12 md:text-lg"
-                key={itemIdx}
-                style={{
-                  ...{
-                    backgroundImage: `url('${c.image}')`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                   
-                  },
-                  filter:"blur(6px)", 
-                  pointerEvents: idx === itemIdx ? "all" : "none",
-                }}
-              >
-                {c.content}
-              </motion.div>
-            );
-          })}
-  
-          <span className="pointer-events-none absolute -right-0 bottom-0 z-0 text-7xl text-neutral-800">
-            {idx + 1}/{CONTENT.length}
-          </span>
-        </div>
-  
-        <Buttons idx={idx} setIdx={setIdx} />
-      </div>
-    );
-  };
-  
-  const Buttons = ({
-    idx,
-    setIdx,
-  }: {
-    idx: number;
-    setIdx: Dispatch<SetStateAction<number>>;
-  }) => {
-    return (
-      <div className="relative grid h-[57px] grid-cols-2 border-t border-neutral-700">
-        <ShiftButton
-          onClick={() => {
-            setIdx((pv) => {
-              if (pv === 0) {
-                return CONTENT.length - 1;
-              } else {
-                return pv - 1;
-              }
-            });
-          }}
-          topDivClasses="bg-neutral-900"
-          bottomDivClasses="bg-neutral-950"
-        >
-          <FiArrowLeft className="mx-auto text-xl" />
-        </ShiftButton>
-        <ShiftButton
-          topDivClasses="bg-neutral-900"
-          btnClasses="border-neutral-700 border-l"
-          bottomDivClasses="bg-neutral-950"
-          onClick={() => {
-            setIdx((pv) => {
-              if (pv === CONTENT.length - 1) {
-                return 0;
-              } else {
-                return pv + 1;
-              }
-            });
-          }}
-        >
-          <FiArrowRight className="mx-auto text-xl" />
-        </ShiftButton>
-  
-        <motion.span
-          key={idx}
-          initial={{
-            width: "0%",
-          }}
-          animate={{
-            width: "100%",
-          }}
-          transition={{
-            duration: 12,
-            ease: "linear",
-          }}
-          onAnimationComplete={() => {
-            setIdx((pv) => {
-              if (pv === CONTENT.length - 1) {
-                return 0;
-              } else {
-                return pv + 1;
-              }
-            });
-          }}
-          className="pointer-events-none absolute -top-[1px] bottom-0 z-20 bg-neutral-600/10"
-        />
-      </div>
-    );
-  };
-  
-  const ShiftButton = ({
-    onClick,
-    children,
-    btnClasses,
-    topDivClasses,
-    bottomDivClasses,
-  }: {
-    onClick?: MouseEventHandler<HTMLButtonElement>;
-    children: React.ReactNode;
-    btnClasses?: string;
-    topDivClasses?: string;
-    bottomDivClasses?: string;
-  }) => {
-    return (
-      <MotionConfig
-        transition={{
-          ease: "circOut",
-          duration: 0.25,
-        }}
-      >
-        <motion.button
-          initial="initial"
-          whileHover="hovered"
-          className={twMerge(
-            "relative overflow-hidden transition-colors",
-            btnClasses
-          )}
-          onClick={onClick}
-        >
-          <motion.div
-            variants={{
-              initial: {
-                y: "0%",
-              },
-              hovered: {
-                y: "-100%",
-              },
-            }}
-            className={twMerge(
-              "grid h-full place-content-center bg-neutral-950",
-              topDivClasses
-            )}
-          >
-            {children}
-          </motion.div>
-          <motion.div
-            variants={{
-              initial: {
-                y: "100%",
-              },
-              hovered: {
-                y: "0%",
-              },
-            }}
-            className={twMerge(
-              "absolute inset-0 grid h-full place-content-center",
-              bottomDivClasses
-            )}
-          >
-            {children}
-          </motion.div>
-        </motion.button>
-      </MotionConfig>
-    );
-  };
-  
-  const CONTENT = [
-    {
-      content: (
-        <>
-          <p className=" text-xl font-bold text-white">
-            <span className="text-white">Welcome to Farmopti 👋</span>{" "}
-            <a href="#" className="text-emerald-300 hover:underline">
-              Using AI to revolutionize farming{" "}
-            </a>
-            with real-time data-driven insights.
-          </p>
-        </>
-      ),
-      image:"/Jean Wimmerlin from Unsplash.jpg"
-    },
-    {
-      content: (
-        <>
-          <p className=" text-xl font-bold text-black">
-            We're developing our <span className="text-white">cutting-edge platform</span> to help farmers
-            optimize crop yields, planting schedules, and resource usage.
-          </p>
-          <p>
-            Your feedback is crucial to ensuring we solve the challenges you face in the field.
-          </p>
-        </>
-      ),
-      image:"/Money Crops by Michelle Spollen.jpg"
-    },
-    {
-      content: (
-        <>
-         <p className=" text-xl font-bold  text-amber-700">
-            We leverage AI models and satellite data to monitor{" "}
-            <span className="text-">soil health</span> and predict crop yields, 
-            helping you make better farming decisions.
-          </p>
-        </>
-      ),
-      image:"/Satisfied Farmer Fields (1).jpg"
-    },
-    {
-      content: (
-        <>
-         <p className=" text-xl font-bold">
-            <span className="text-white">Interested?</span> Join our waitlist{" "}
-            <span className="hidden md:inline">to your left</span>
-            <span className="inline md:hidden">above</span> for exclusive updates and 
-            a launch discount 🚀
-          </p>
-        </>
-      ),
-      image:"/Satisfied Farmer Fields.jpg"
-    },
-  ];
-  
+};
+
+export default ShuffleHero;
