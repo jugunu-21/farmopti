@@ -19,7 +19,7 @@ import {
   
   export const FiftyFiftyHero = () => {
     return (
-      <section className="mx-auto my-4 grid max-w-5xl grid-cols-12 border border-neutral-700 bg-neutral-900 text-neutral-50">
+      <section className="mx-auto my-6 grid max-w-5xl grid-cols-12 border border-neutral-700 bg-neutral-900 text-neutral-50">
         <Left />
         <Right />
       </section>
@@ -28,15 +28,18 @@ import {
   
   const Left = () => (
     <div className="col-span-12 flex flex-col justify-between border-r border-neutral-700 md:col-span-6">
-      <div className="px-6 py-20 md:px-12 md:py-24" style={{
+      <div className="px-6 py-20 md:px-12 md:py-24" 
+      // style={{
                 
-                    backgroundImage: "url('/Different Love.svg')",
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                  }
+      //               backgroundImage: "url('/Different Love.svg')",
+      //               backgroundSize: 'cover',
+      //               backgroundPosition: 'center',
+      //               backgroundRepeat: 'no-repeat',
+                   
+      //             }
                   
-                }>
+      //           }
+                >
         <h1 className="text-2xl uppercase  text-green-300 leading-tight md:text-3xl md:leading-tight">
           <span className="text-amber-300 ">AI-Powered Crop Insights </span>
          for Sustainable Farming Success.
@@ -121,7 +124,9 @@ import {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
+                   
                   },
+                  filter:"blur(6px)", 
                   pointerEvents: idx === itemIdx ? "all" : "none",
                 }}
               >
@@ -278,12 +283,12 @@ import {
     {
       content: (
         <>
-          <p>
-            <span className="text-white">Hey, we're ABC 👋</span>{" "}
+          <p className=" text-xl font-bold text-white">
+            <span className="text-white">Welcome to Farmopti 👋</span>{" "}
             <a href="#" className="text-emerald-300 hover:underline">
-              We do XYZ{" "}
+              Using AI to revolutionize farming{" "}
             </a>
-            for small ecomm businesses.
+            with real-time data-driven insights.
           </p>
         </>
       ),
@@ -292,13 +297,12 @@ import {
     {
       content: (
         <>
-          <p>
-            We're working on building out our{" "}
-            <span className="text-white">revolutionary</span> new platform.
+          <p className=" text-xl font-bold text-black">
+            We're developing our <span className="text-white">cutting-edge platform</span> to help farmers
+            optimize crop yields, planting schedules, and resource usage.
           </p>
           <p>
-            We'd love to hear from you to make sure what we're building will fix
-            your problems.
+            Your feedback is crucial to ensuring we solve the challenges you face in the field.
           </p>
         </>
       ),
@@ -307,10 +311,10 @@ import {
     {
       content: (
         <>
-          <p>
-            We integrate directly with <span className="text-white">Shopify</span>{" "}
-            <SiShopify className="inline text-green-400" /> in a single click. No
-            crazy setup in walkthrough needed.
+         <p className=" text-xl font-bold  text-amber-700">
+            We leverage AI models and satellite data to monitor{" "}
+            <span className="text-">soil health</span> and predict crop yields, 
+            helping you make better farming decisions.
           </p>
         </>
       ),
@@ -319,14 +323,15 @@ import {
     {
       content: (
         <>
-          <p>
-            <span className="text-white">Sound cool?</span> Join the waitlist{" "}
+         <p className=" text-xl font-bold">
+            <span className="text-white">Interested?</span> Join our waitlist{" "}
             <span className="hidden md:inline">to your left</span>
-            <span className="inline md:hidden">above</span> for updates and a
-            discount when we launch 🚀
+            <span className="inline md:hidden">above</span> for exclusive updates and 
+            a launch discount 🚀
           </p>
         </>
       ),
       image:"/Satisfied Farmer Fields.jpg"
     },
   ];
+  

@@ -29,12 +29,12 @@ const Content = ({ content }: { content: typeof items }) => {
       {content.map(({ id, title, description }, idx) => (
         <div
           key={id}
-          className={`p-8 h-screen flex flex-col justify-between ${
-            idx % 2 ? "bg-green-100 text-black" : "bg-gray-300 text-white"
+          className={`p-8 h-screen flex flex-col space-y-4 ${
+            idx % 2 ? "bg-green-100 text-black" : "bg-gray-300 text-black"
           }`}
-        >zero
+        >
           <h3 className="text-3xl font-medium">{title}</h3>
-          <p className="font-light w-full max-w-md">{description}</p>
+          <p className="font-light text-xl w-full max-w-md ">{description}</p>
         </div>
       ))}
     </div>
@@ -75,30 +75,33 @@ export default OppoScroll;
 const items = [
   {
     id: 1,
-    title: "Black Nike w white check",
+    title: "Predictive Analytics for Maximizing Crop Yields",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-    img: "https://images.unsplash.com/photo-1543508282-6319a3e2621f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=830&q=80",
+      "Our platform harnesses the power of artificial intelligence and machine learning to provide accurate crop yield predictions. By analyzing environmental data, soil conditions, and satellite imagery, we help farmers forecast yields before planting begins. This allows for better financial planning, more efficient resource allocation, and reduced risk of over or under-production",
+    img: "/Green black frog.jpg",
+    
+    Description:"Our platform harnesses the power of artificial intelligence and machine learning to provide accurate crop yield predictions. By analyzing environmental data, soil conditions, and satellite imagery, we help farmers forecast yields before planting begins. This allows for better financial planning, more efficient resource allocation, and reduced risk of over or under-"
   },
+
   {
     id: 2,
-    title: "Bunch of black and white shoes",
+    title: "Smart Scheduling for Optimal Growth",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-    img: "https://images.unsplash.com/photo-1600054904350-1d493ae5f922?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80",
+      " Our platform provides farmers with optimized planting schedules based on historical crop data, current weather patterns, and soil health metrics. This ensures crops are planted at the most ideal times to maximize growth and yield while reducing waste of seeds, water, and other inputs",
+    img: "/Smart Scheduling Optimal Growth.jpg",
   },
   {
     id: 3,
-    title: "White shoes in the rain",
+    title: "Continuous Soil Condition Tracking",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-    img: "https://images.unsplash.com/photo-1465479423260-c4afc24172c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80",
+      "Using a combination of IoT sensors and satellite data, we offer continuous soil health monitoring. Farmers can track key metrics such as moisture levels, nutrient content, and temperature in real-time. Alerts are sent when conditions deviate from optimal ranges, allowing timely interventions to preserve crop health.",
+    img: "/Soil Condition Tracking.jpg",
   },
   {
     id: 4,
-    title: "White shoes with black heel",
+    title: "Efficient Water and Fertilizer Use",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      "We help farmers manage their water and fertilizer usage efficiently through AI-driven recommendations. By monitoring real-time usage and crop needs, our platform helps avoid over-watering and over-fertilization, saving resources and costs while promoting sustainable agricultural practices",
     img: "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1662&q=80",
   },
 ];
