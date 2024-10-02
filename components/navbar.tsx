@@ -10,10 +10,10 @@ import Gradientbutton from "@/lib/ui/button";
 const Example = () => {
   return (
     <section
-      className=" h-[16vh] w-full "
-      // style={{
-      //   backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23171717'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`,
-      // }}
+      className=" h-[16vh] w-full"
+    // style={{
+    //   backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23171717'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`,
+    // }}
     >
       <GlassNavigation />
 
@@ -59,15 +59,15 @@ const GlassNavigation = () => {
       style={{
         cursor: hovered ? "none" : "auto",
       }}
-      className="glass-nav fixed left-0 right-0 top-0 z-10 mx-auto max-w-6xl overflow-hidden border-[1px] border-black/10  from-black/20 to-black/5 backdrop-blur md:left-6 md:right-6 md:top-6 md:rounded-2xl"
+      className="glass-nav fixed   left-0 right-0 top-0 z-10 mx-auto max-w-6xl overflow-hidden border-[1px] border-black/10  from-black/20 to-black/5 backdrop-blur md:left-6 md:right-6 md:top-6 md:rounded-2xl"
     >
-      <div className="glass-nav flex items-center justify-between px-5 py-5">
-      <Logo /> 
+      <div className="glass-nav  z-50 flex items-center justify-between px-5 py-5">
+        <Logo />
         <Cursor hovered={hovered} scope={scope} />
 
         <Links />
 
-      
+
 
         <Buttons setMenuOpen={setMenuOpen} />
       </div>
@@ -89,13 +89,12 @@ const Cursor = ({
       initial={false}
       animate={{
         opacity: hovered ? 1 : 0,
-        transform: `scale(${
-          hovered ? 1 : 0
-        }) translateX(-50%) translateY(-50%)`,
+        transform: `scale(${hovered ? 1 : 0
+          }) translateX(-50%) translateY(-50%)`,
       }}
       transition={{ duration: 0.15 }}
       ref={scope}
-      className="pointer-events-none absolute z-0 grid h-[50px] w-[50px] origin-[0px_0px] place-content-center rounded-full bg-gradient-to-br from-indigo-600 from-40% to-indigo-400 text-2xl"
+      className="pointer-events-none absolute z-0 grid h-[50px] w-[50px] origin-[0px_0px] place-content-center rounded-full bg-gradient-to-br from-amber-600 from-40% to-amber-400 text-2xl"
     >
       <FiArrowUpRight className="text-black" />
     </motion.span>
@@ -103,24 +102,24 @@ const Cursor = ({
 };
 
 const Logo = () => {
-  
-  return(
+
+  return (
     <Link href="/" className=" relative left-0 top-[50%] z-10 text-4xl font-black text-black mix-blend-overlay  ">
-  {/* <span onClick={ ()=>router.push("/me")} className="pointer-events-none relative left-0 top-[50%] z-10 text-4xl font-black text-black mix-blend-overlay md:absolute md:left-[50%] md:-translate-x-[50%] md:-translate-y-[50%]"> */}
-    logo.
-  </Link>)
+      {/* <span onClick={ ()=>router.push("/me")} className="pointer-events-none relative left-0 top-[50%] z-10 text-4xl font-black text-black mix-blend-overlay md:absolute md:left-[50%] md:-translate-x-[50%] md:-translate-y-[50%]"> */}
+      logo.
+    </Link>)
 };
 
 const Links = () => (
   <div className="hidden items-center gap-2 md:flex">
-   
+
     <GlassLink text="About Us" Link="about" />
-    <GlassLink text="Contact" Link="contact"  />
+    <GlassLink text="Contact" Link="contact" />
     <GlassLink text="Testimonials" Link="testimonials" />
   </div>
 );
 
-const GlassLink = ({ text,Link }: { text: string ,Link: string}) => {
+const GlassLink = ({ text, Link }: { text: string, Link: string }) => {
   return (
     <a
       href={Link}
@@ -134,9 +133,9 @@ const GlassLink = ({ text,Link }: { text: string ,Link: string}) => {
   );
 };
 
-const TextLink = ({ text }: { text: string }) => {
+const TextLink = ({ text,Link }: { text: string ,Link:string}) => {
   return (
-    <a href="#" className="text-black/90 text-xl  transition-colors hover:text-black">
+    <a href={Link} className="text-black/90 text-sm transition-colors hover:text-black">
       {text}
     </a>
   );
@@ -152,7 +151,7 @@ const Buttons = ({
       <SignInButton />
     </div> */}
 
-  <Gradientbutton text="Sign In" cta="/signIn"/>
+    <Gradientbutton text="Sign In" cta="/signIn" />
 
     <button
       onClick={() => setMenuOpen((pv) => !pv)}
@@ -186,9 +185,10 @@ const MobileMenu = ({ menuOpen }: { menuOpen: boolean }) => {
     >
       <div ref={ref} className="flex items-center justify-end px-4 pb-4">
         <div className="flex items-center gap-4">
-          <TextLink text="Products" />
-          <TextLink text="History" />
-          <TextLink text="Contact" />
+          <TextLink text="About Us" Link="about" />
+          <TextLink text="Contact" Link="contact" />
+          <TextLink text="Testimonials" Link="testimonials" />
+          
         </div>
         {/* <SignInButton /> */}
       </div>
