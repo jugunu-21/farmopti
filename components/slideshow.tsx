@@ -9,14 +9,14 @@ const OppoScroll = () => {
 
   return (
     <>
-      <div className="bg-white text-black p-4 grid place-items-center">
+      <div className="bg-amber-100 text-black p-4 grid place-items-center">
         <FiArrowDown className="text-xl" />
       </div>
       <section ref={targetRef} className="flex bg-black text-white">
         <Content content={items} />
         <Images content={items} scrollYProgress={scrollYProgress} />
       </section>
-      <div className="bg-black text-white p-4 grid place-items-center">
+      <div className="bg-amber-100 text-black p-4 grid place-items-center">
         <FiArrowUp className="text-xl" />
       </div>
     </>

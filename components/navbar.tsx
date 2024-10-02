@@ -135,7 +135,7 @@ const GlassLink = ({ text,Link }: { text: string ,Link: string}) => {
 
 const TextLink = ({ text }: { text: string }) => {
   return (
-    <a href="#" className="text-black/90 text-   transition-colors hover:text-black">
+    <a href="#" className="text-black/90 text-xl  transition-colors hover:text-black">
       {text}
     </a>
   );
