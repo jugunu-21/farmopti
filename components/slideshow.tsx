@@ -30,9 +30,9 @@ const Content = ({ content }: { content: typeof items }) => {
         <div
           key={id}
           className={`p-8 h-screen flex flex-col justify-between ${
-            idx % 2 ? "bg-white text-black" : "bg-black text-white"
+            idx % 2 ? "bg-green-100 text-black" : "bg-gray-300 text-white"
           }`}
-        >
+        >zero
           <h3 className="text-3xl font-medium">{title}</h3>
           <p className="font-light w-full max-w-md">{description}</p>
         </div>
