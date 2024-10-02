@@ -97,26 +97,29 @@ const items = [
       "Using a combination of IoT sensors and satellite data, we offer continuous soil health monitoring. Farmers can track key metrics such as moisture levels, nutrient content, and temperature in real-time. Alerts are sent when conditions deviate from optimal ranges, allowing timely interventions to preserve crop health.",
     img: "/Soil Condition Tracking.jpg",
   },
+ 
+  
   {
     id: 4,
     title: "Efficient Water and Fertilizer Use",
     description:
       "We help farmers manage their water and fertilizer usage efficiently through AI-driven recommendations. By monitoring real-time usage and crop needs, our platform helps avoid over-watering and over-fertilization, saving resources and costs while promoting sustainable agricultural practices",
-    img: "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1662&q=80",
+    img: "Efficient Water Fertilizer.jpg",
   },
   
   {
     id: 5,
-    title: "Efficient Water and Fertilizer Use",
+    title: "Real-Time Pest and Disease Detection",
     description:
-      "We help farmers manage their water and fertilizer usage efficiently through AI-driven recommendations. By monitoring real-time usage and crop needs, our platform helps avoid over-watering and over-fertilization, saving resources and costs while promoting sustainable agricultural practices",
-    img: "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1662&q=80",
+      "Our platform employs AI to analyze crop images and sensor data to detect early signs of pests and diseases. Farmers receive instant alerts and recommendations for treatment, helping to minimize crop damage and avoid costly losses.",
+    img: "/Beetle on Leaf.jpg",
   },
+  
   {
     id: 6,
-    title: "Efficient Water and Fertilizer Use",
+    title: "Climate Adaptation Solutions",
     description:
-      "We help farmers manage their water and fertilizer usage efficiently through AI-driven recommendations. By monitoring real-time usage and crop needs, our platform helps avoid over-watering and over-fertilization, saving resources and costs while promoting sustainable agricultural practices",
-    img: "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1662&q=80",
-  },
+      "We provide farmers with climate-adaptive farming solutions by predicting weather extremes and suggesting changes in planting techniques or crop types. This minimizes the risk of crop failure due to climate fluctuations.",
+    img: "/Terrace Plantation Palm Trees.jpg",
+  }
 ];
