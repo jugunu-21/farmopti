@@ -128,7 +128,7 @@ const SupplementalContent = () => {
     <div className="group sticky top-4 m-4 h-80 overflow-hidden rounded-3xl rounded-tl-[4rem] bg-slate-950 md:h-[calc(100vh_-_2rem)]">
       <img
         alt="An example image"
-        src="/imgs/abstract/18.jpg"
+        src="/Farmers Contact Photo.jpg"
         className="h-full w-full bg-white object-cover transition-all duration-500 group-hover:scale-105 group-hover:opacity-50"
       />
 
@@ -149,16 +149,16 @@ const SupplementalContent = () => {
           className="mb-2 text-3xl font-semibold leading-[1.25] text-white lg:text-4xl"
           variants={primaryVariants}
         >
-          Connecting Designers
+         Empowering Farmers
           <br />
-          with Opportunities
+          with AI Technology
         </motion.h2>
         <motion.p
           variants={primaryVariants}
           className="mb-6 max-w-md text-sm text-slate-300"
         >
-          Bloop is the home of makers, making amazing things, and getting paid.
-          Find your dream job with us.
+         Our platform helps farmers optimize planting, improve crop yields, and
+         make data-driven decisions for a more sustainable future.
         </motion.p>
         <div className="flex items-center gap-4">
           <div className="flex items-center">
@@ -166,31 +166,31 @@ const SupplementalContent = () => {
               variants={avatarVariants}
               className="h-8 w-8 rounded-full border-[1px] border-slate-100 object-cover shadow-inner"
               alt="A placeholder testimonial image"
-              src="/imgs/head-shots/1.jpg"
+              src="/Farmers Image Photos by Tati Alves.jpg"
             />
             <motion.img
               variants={avatarVariants}
               className="-ml-4 h-8 w-8 rounded-full border-[1px] border-slate-100 object-cover shadow-inner"
               alt="A placeholder testimonial image"
-              src="/imgs/head-shots/2.jpg"
+              src="/Farmers Profile Image new.jpg"
             />
             <motion.img
               variants={avatarVariants}
               className="-ml-4 h-8 w-8 rounded-full border-[1px] border-slate-100 object-cover shadow-inner"
               alt="A placeholder testimonial image"
-              src="/imgs/head-shots/3.jpg"
+              src="/Farmers Profile Image cottonbro.jpg"
             />
             <motion.img
               variants={avatarVariants}
               className="-ml-4 h-8 w-8 rounded-full border-[1px] border-slate-100 object-cover shadow-inner"
               alt="A placeholder testimonial image"
-              src="/imgs/head-shots/4.jpg"
+              src="/Farmers Profile Image Ron Lach.jpg"
             />
             <motion.img
               variants={avatarVariants}
               className="-ml-4 h-8 w-8 rounded-full border-[1px] border-slate-100 object-cover shadow-inner"
               alt="A placeholder testimonial image"
-              src="/imgs/head-shots/6.jpg"
+              src="/Farmers Profile Image.jpg"
             />
           </div>
           <div>
