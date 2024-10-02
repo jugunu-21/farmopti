@@ -98,7 +98,7 @@ const CARDS: CardType[] = [
     description:
       "Our platform optimizes your planting schedules based on real-time data to help you achieve the best crop yields.",
     ctaClasses: "bg-green-300",
-    routeTo: "#",
+    routeTo: "details/#ai-driven-planting",
   },
   {
     id: 2,
@@ -107,7 +107,7 @@ const CARDS: CardType[] = [
     description:
       "We prioritize your data security. All your environmental, soil, and yield data are protected with advanced encryption.",
     ctaClasses: "bg-blue-300",
-    routeTo: "#",
+    routeTo: "details/#data-privacy",
   },
   {
     id: 3,
@@ -116,7 +116,7 @@ const CARDS: CardType[] = [
     description:
       "Use our platform with your existing tools to easily integrate your data and streamline your operations.",
     ctaClasses: "bg-purple-300",
-    routeTo: "#",
+    routeTo: "details/#seamless-integration",
   },
   {
     id: 4,
@@ -125,6 +125,6 @@ const CARDS: CardType[] = [
     description:
       "Farmers around the world trust our AI solutions to increase efficiency, reduce waste, and improve sustainability.",
     ctaClasses: "bg-yellow-300",
-    routeTo: "#",
+    routeTo: "details/#trusted-by-farmers",
   },
 ];
