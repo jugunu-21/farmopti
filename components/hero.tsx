@@ -46,7 +46,7 @@ const shuffle = (array: (typeof squareData)[0][]) => {
 const squareData = [
   {
     id: 1,
-    src: "/Agriculture-Protest-City-(1).jpg",
+    src: "/Agriculture Protest City new.jpg",
   },
   {
     id: 2,
@@ -54,7 +54,7 @@ const squareData = [
   },
   {
     id: 3,
-    src: "/Elderly Men Plantation B&W.jpg",
+    src: "/Soil Condition Tracking.jpg",
   },
   {
     id: 4,
@@ -66,7 +66,7 @@ const squareData = [
   },
   {
     id: 6,
-    src: "/New Tech Farmers Photo (1).jpg",
+    src: "/New Tech Farmers Photo new.jpg",
   },
   {
     id: 7,
@@ -94,7 +94,7 @@ const squareData = [
   },
   {
     id: 13,
-    src: "/Satisfied Farmer Fields (1).jpg",
+    src: "/Satisfied Farmer Fields new.jpg",
   },
   {
     id: 14,
@@ -116,18 +116,13 @@ const generateSquares = () => {
       key={sq.id}
       layout
       transition={{ duration: 1.5, type: "spring" }}
-      className="w-full h-full"
+      className="w-full h-full "
       style={{
         backgroundImage: `url(${encodeURIComponent(sq.src)})`,
         backgroundSize: "cover",
       }}
     >
-       {/* <img
-            
-            alt={sq.src}
-            className="h-screen w-full object-cover"
-            src={sq.src}
-          /> */}
+      
     </motion.div>
   ));
 };
