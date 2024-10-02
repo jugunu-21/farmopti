@@ -94,37 +94,37 @@ const CARDS: CardType[] = [
   {
     id: 1,
     Icon: FiCalendar,
-    title: "A new type of Calendar",
+    title: "AI-Driven Planting Schedules",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo officia atque iure voluptatibus necessitatibus odit cupiditate reprehenderit iusto quaerat!",
-    ctaClasses: "bg-violet-300",
+      "Our platform optimizes your planting schedules based on real-time data to help you achieve the best crop yields.",
+    ctaClasses: "bg-green-300",
     routeTo: "#",
   },
   {
     id: 2,
     Icon: FiDatabase,
-    title: "#1 in data privacy",
+    title: "Data Privacy & Security",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo officia atque iure voluptatibus necessitatibus odit cupiditate reprehenderit iusto quaerat!",
-    ctaClasses: "bg-pink-300",
+      "We prioritize your data security. All your environmental, soil, and yield data are protected with advanced encryption.",
+    ctaClasses: "bg-blue-300",
     routeTo: "#",
   },
   {
     id: 3,
     Icon: FiCopy,
-    title: "Use your existing tools",
+    title: "Seamless Integration",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo officia atque iure voluptatibus necessitatibus odit cupiditate reprehenderit iusto quaerat!",
-    ctaClasses: "bg-red-300",
+      "Use our platform with your existing tools to easily integrate your data and streamline your operations.",
+    ctaClasses: "bg-purple-300",
     routeTo: "#",
   },
   {
     id: 4,
     Icon: FiAward,
-    title: "Customers love us",
+    title: "Trusted by Farmers",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illo officia atque iure voluptatibus necessitatibus odit cupiditate reprehenderit iusto quaerat!",
-    ctaClasses: "bg-amber-300",
+      "Farmers around the world trust our AI solutions to increase efficiency, reduce waste, and improve sustainability.",
+    ctaClasses: "bg-yellow-300",
     routeTo: "#",
   },
 ];
