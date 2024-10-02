@@ -14,7 +14,6 @@ export default function Home() {
     <StickyCards/>
     <Benefits/>
     <ScrollingTestimonials/>
-    
     <Newsletter/>
     </div>
   );
