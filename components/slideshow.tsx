@@ -9,16 +9,16 @@ const OppoScroll = () => {
 
   return (
     <>
-      <div className="bg-amber-100 text-black p-4 grid place-items-center">
-        {/* <FiArrowDown className="text-xl" /> */}
-      </div>
+      {/* <div className="bg-amber-100 text-black p-4 grid place-items-center">
+        <FiArrowDown className="text-xl" />
+      </div> */}
       <section ref={targetRef} className="flex bg-black text-white">
         <Content content={items} />
         <Images content={items} scrollYProgress={scrollYProgress} />
       </section>
-      <div className="bg-amber-100 text-black p-4 grid place-items-center">
-        {/* <FiArrowUp className="text-xl" /> */}
-      </div>
+      {/* <div className="bg-amber-100 text-black p-4 grid place-items-center">
+        <FiArrowUp className="text-xl" />
+      </div> */}
     </>
   );
 };
@@ -33,8 +33,8 @@ const Content = ({ content }: { content: typeof items }) => {
             idx % 2 ? "bg-green-100 text-black" : "bg-gray-300 text-black"
           }`}
         >
-          <h3 className="text-3xl font-medium">{title}</h3>
-          <p className="font-light text-xl w-full max-w-md ">{description}</p>
+          <h3 className="text-xl md:text-3xl font-medium">{title}</h3>
+          <p className="font-light text:lg md:text-xl w-full max-w-md ">{description}</p>
         </div>
       ))}
     </div>
@@ -55,7 +55,7 @@ const Images = ({
       );
 
   return (
-    <div className="h-screen overflow-hidden sticky top-0 w-24 md:w-full">
+    <div className="h-screen overflow-hidden sticky top-0 w-full">
       <motion.div style={{ top }} className="absolute left-0 right-0">
         {[...content].reverse().map(({ img, id, title }) => (
           <img
