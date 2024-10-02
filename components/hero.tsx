@@ -50,46 +50,47 @@ const squareData = [
   },
   {
     id: 2,
-    src: "/Agriculture Protest City.jpg"
+    src: "/Agriculture Protest City.jpg",
   },
   {
     id: 3,
-    src: "/Elderly Men Plantation B&W.jpg"
+    src: "/Elderly Men Plantation B&W.jpg",
   },
   {
     id: 4,
-    src: "/Farmers JakeHeinemann.jpg"
+    src: "/Farmers JakeHeinemann.jpg",
   },
   {
     id: 5,
-    src: "/Farmers Photos Erikscheel.jpg"
+    src: "/Farmers Photos Erikscheel.jpg",
   },
   {
     id: 6,
-    src: "/New Tech Farmers Photo (1).jpg"
+    src: "/New Tech Farmers Photo (1).jpg",
   },
   {
     id: 7,
-    src: "/New Tech Farmers Photo.jpg"},
+    src: "/New Tech Farmers Photo.jpg",
+  },
   {
     id: 8,
-    src: "/New Tech Farmers Quang Nguyen Vinh.jpg"
+    src: "/New Tech Farmers Quang Nguyen Vinh.jpg",
   },
   {
     id: 9,
-    src: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: "/Farmers Field Photo by Cristian Rojas.jpg",
   },
   {
     id: 10,
-    src: "https://images.unsplash.com/photo-1610768764270-790fbec18178?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    src: "/Farmers Field Radwanmenzer.jpg",
   },
   {
     id: 11,
-    src: "https://images.unsplash.com/photo-1507034589631-9433cc6bc453?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=684&q=80",
+    src: "/Farmers Photos Dodogr8.jpg",
   },
   {
     id: 12,
-    src: "https://images.unsplash.com/photo-1533107862482-0e6974b06ec4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80",
+    src: "/Farmers Photos Kelly.jpg",
   },
   {
     id: 13,
@@ -117,10 +118,17 @@ const generateSquares = () => {
       transition={{ duration: 1.5, type: "spring" }}
       className="w-full h-full"
       style={{
-        backgroundImage: `url(${sq.src})`,
+        backgroundImage: `url(${encodeURIComponent(sq.src)})`,
         backgroundSize: "cover",
       }}
-    ></motion.div>
+    >
+       {/* <img
+            
+            alt={sq.src}
+            className="h-screen w-full object-cover"
+            src={sq.src}
+          /> */}
+    </motion.div>
   ));
 };
 
