@@ -28,10 +28,10 @@ const Form = () => {
           variants={primaryVariants}
           className="mb-2 text-center text-4xl font-semibold"
         >
-          Create your account
+         Contact Us 
         </motion.h1>
         <motion.p variants={primaryVariants} className="mb-8 text-center">
-          Try it free for 30 days, no CC required
+          Hi!!! my Name is...
         </motion.p>
 
         <form onSubmit={(e) => e.preventDefault()} className="w-full">
