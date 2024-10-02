@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 
 const ScrollingTestimonials = () => {
   return (
-    <div className="bg-slate-950 py-12">
+    <div className=" py-12">
       <div className="mb-8 px-4">
-        <h3 className="text-slate-50 text-4xl font-semibold text-center">
+        <h3 className="text-slate-900 text-4xl font-semibold text-center">
           Testimonials
         </h3>
-        <p className="text-center text-slate-300 text-sm mt-2 max-w-lg mx-auto">
+        <p className="text-center text-slate-900 text-sm mt-2 max-w-lg mx-auto">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
           consequatur reprehenderit.
         </p>
@@ -60,12 +60,12 @@ const TestimonialList = ({
             className="shrink-0 w-[500px] grid grid-cols-[7rem,_1fr] rounded-lg overflow-hidden relative"
           >
             <img src={t.img} className="w-full h-44 object-cover" />
-            <div className="bg-slate-900 text-slate-50 p-4">
+            <div className="bg-slate-500 text-white p-4">
               <span className="block font-semibold text-lg mb-1">{t.name}</span>
               <span className="block mb-3 text-sm font-medium">{t.title}</span>
               <span className="block text-sm text-slate-300">{t.info}</span>
             </div>
-            <span className="text-7xl absolute top-2 right-2 text-slate-700">
+            <span className="text-7xl absolute top-2 right-2 text-white">
               "
             </span>
           </div>
