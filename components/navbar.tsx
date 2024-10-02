@@ -135,7 +135,7 @@ const GlassLink = ({ text,Link }: { text: string ,Link: string}) => {
 
 const TextLink = ({ text }: { text: string }) => {
   return (
-    <a href="#" className="text-black/90 transition-colors hover:text-black">
+    <a href="#" className="text-black/90 text-   transition-colors hover:text-black">
       {text}
     </a>
   );
@@ -147,12 +147,12 @@ const Buttons = ({
   setMenuOpen: Dispatch<SetStateAction<boolean>>;
 }) => (
   <div className="flex items-center gap-4">
-    <div className="hidden md:block">
+    {/* <div className="hidden md:block">
       <SignInButton />
-    </div>
+    </div> */}
 
     <button className="relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-indigo-600 from-40% to-indigo-400 px-4 py-2 font-medium text-black transition-transform hover:scale-105 active:scale-95">
-      Try free
+      Sign In
     </button>
 
     <button
@@ -185,13 +185,13 @@ const MobileMenu = ({ menuOpen }: { menuOpen: boolean }) => {
       }}
       className="block overflow-hidden md:hidden"
     >
-      <div ref={ref} className="flex items-center justify-between px-4 pb-4">
+      <div ref={ref} className="flex items-center justify-end px-4 pb-4">
         <div className="flex items-center gap-4">
           <TextLink text="Products" />
           <TextLink text="History" />
           <TextLink text="Contact" />
         </div>
-        <SignInButton />
+        {/* <SignInButton /> */}
       </div>
     </motion.div>
   );
