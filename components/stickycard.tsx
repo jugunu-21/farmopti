@@ -28,7 +28,7 @@ export const StickyCards = () => {
           />
         ))}
       </div>
-      <div className="h-screen bg-black" />
+      {/* <div className="h-screen " /> */}
     </>
   );
 };
@@ -50,10 +50,10 @@ const Card = ({ position, card, scrollYProgress }: CardProps) => {
       style={{
         height: CARD_HEIGHT,
         y: position === CARDS.length ? undefined : y,
-        background: isOddCard ? "black" : "white",
-        color: isOddCard ? "white" : "black",
+        background: isOddCard ? "lightgreen" : "white",
+        color: isOddCard ? "black" : "black",
       }}
-      className="sticky top-0 flex w-full origin-top flex-col items-center justify-center px-4"
+      className="sticky top-0 flex w-full  origin-top flex-col items-center justify-center px-4"
     >
       <card.Icon className="mb-4 text-4xl" />
       <h3 className="mb-6 text-center text-4xl font-semibold md:text-6xl">
