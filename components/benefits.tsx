@@ -5,10 +5,10 @@ export default function Benefits() {
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-          <h1 className="sm:text-4xl  font-bold title-font mb-2 text-slate-900 text-4xl  ">
+          <h1 className="sm:text-4xl  font-bold title-font mb-2 text-slate-900 text-2xl  ">
             Transform Your Farm with AI Technology
           </h1>
-          <p className="lg:w-1/2 w-full leading-relaxed text-lg text-gray-700">
+          <p className="lg:w-1/2 w-full text-sm leading-relaxed sm:text-lg text-gray-700">
             Discover how our AI-powered platform helps farmers maximize crop yields, minimize resource waste, and embrace sustainable practices for a better future.
           </p>
         </div>
