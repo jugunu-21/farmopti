@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 
 const ScrollingTestimonials = () => {
   return (
-    <div className=" py-12">
+    <div  id="testimonials"
+    className=" py-12">
       <div className="mb-8 px-4">
   <h3 className="text-slate-900 text-2xl sm:text-4xl font-semibold text-center">
     What Our Users Are Saying......

@@ -12,7 +12,7 @@ const OppoScroll = () => {
       {/* <div className="bg-amber-100 text-black p-4 grid place-items-center">
         <FiArrowDown className="text-xl" />
       </div> */}
-      <section ref={targetRef} className="flex bg-black text-white">
+      <section id="features"ref={targetRef} className="flex bg-black text-white py-4">
         <Content content={items} />
         <Images content={items} scrollYProgress={scrollYProgress} />
       </section>
@@ -99,6 +99,21 @@ const items = [
   },
   {
     id: 4,
+    title: "Efficient Water and Fertilizer Use",
+    description:
+      "We help farmers manage their water and fertilizer usage efficiently through AI-driven recommendations. By monitoring real-time usage and crop needs, our platform helps avoid over-watering and over-fertilization, saving resources and costs while promoting sustainable agricultural practices",
+    img: "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1662&q=80",
+  },
+  
+  {
+    id: 5,
+    title: "Efficient Water and Fertilizer Use",
+    description:
+      "We help farmers manage their water and fertilizer usage efficiently through AI-driven recommendations. By monitoring real-time usage and crop needs, our platform helps avoid over-watering and over-fertilization, saving resources and costs while promoting sustainable agricultural practices",
+    img: "https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1662&q=80",
+  },
+  {
+    id: 6,
     title: "Efficient Water and Fertilizer Use",
     description:
       "We help farmers manage their water and fertilizer usage efficiently through AI-driven recommendations. By monitoring real-time usage and crop needs, our platform helps avoid over-watering and over-fertilization, saving resources and costs while promoting sustainable agricultural practices",

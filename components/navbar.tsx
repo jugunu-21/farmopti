@@ -115,7 +115,7 @@ const Links = () => (
 
     <GlassLink text="About Us" Link="about" />
     <GlassLink text="Contact" Link="contact" />
-    <GlassLink text="Testimonials" Link="testimonials" />
+    <GlassLink text="Testimonials" Link="#testimonials" />
   </div>
 );
 
@@ -185,9 +185,9 @@ const MobileMenu = ({ menuOpen }: { menuOpen: boolean }) => {
     >
       <div ref={ref} className="flex items-center justify-end px-4 pb-4">
         <div className="flex items-center gap-4">
-          <TextLink text="About Us" Link="about" />
+          <TextLink text="About Us" Link="/#features" />
           <TextLink text="Contact" Link="contact" />
-          <TextLink text="Testimonials" Link="testimonials" />
+          <TextLink text="Testimonials" Link="/#testimonials" />
           
         </div>
         {/* <SignInButton /> */}
