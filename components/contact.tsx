@@ -4,7 +4,7 @@ import { FiArrowUpRight, FiStar } from "react-icons/fi";
 
 export const SlideInAuth = () => {
   return (
-    <section className=" pt-4 grid min-h-screen grid-cols-1 bg-slate-50 md:grid-cols-[1fr,_400px] lg:grid-cols-[1fr,_600px]">
+    <section className=" pt-4 grid min-h-screen grid-cols-1 bg-green-50 md:grid-cols-[1fr,_400px] lg:grid-cols-[1fr,_600px]">
       {/* <Logo /> */}
       <Form />
       <SupplementalContent />
@@ -28,10 +28,10 @@ const Form = () => {
           variants={primaryVariants}
           className="mb-2 text-center text-4xl font-semibold"
         >
-         Contact Us 
+         Create your account 
         </motion.h1>
         <motion.p variants={primaryVariants} className="mb-8 text-center">
-          Hi!!! my Name is...
+         Start with Ur Credentials..
         </motion.p>
 
         <form onSubmit={(e) => e.preventDefault()} className="w-full">
@@ -46,7 +46,7 @@ const Form = () => {
               id="email-input"
               type="email"
               placeholder="Enter your email"
-              className="w-full rounded border-[1px] border-slate-300 px-2.5 py-1.5 focus:outline-indigo-600"
+              className="w-full rounded border-[1px] border-slate-300 px-2.5 py-1.5 focus:outline-green-400"
               required
             />
           </motion.div>
@@ -62,7 +62,7 @@ const Form = () => {
               id="password-input"
               type="password"
               placeholder="Enter your password"
-              className="w-full rounded border-[1px] border-slate-300 px-2.5 py-1.5 focus:outline-indigo-600"
+              className="w-full rounded border-[1px] border-slate-300 px-2.5 py-1.5 focus:outline-green-400"
               required
             />
           </motion.div>
@@ -78,7 +78,7 @@ const Form = () => {
               id="rt-password-input"
               type="password"
               placeholder="Re-type your password"
-              className="w-full rounded border-[1px] border-slate-300 px-2.5 py-1.5 focus:outline-indigo-600"
+              className="w-full rounded border-[1px] border-slate-300 px-2.5 py-1.5 focus:outline-green-400"
               required
             />
           </motion.div>
@@ -105,13 +105,13 @@ const Form = () => {
               scale: 0.985,
             }}
             type="submit"
-            className="mb-1.5 w-full rounded bg-indigo-600 px-4 py-2 text-center font-medium text-white transition-colors hover:bg-indigo-700"
+            className="mb-1.5 w-full rounded bg-green-500 px-4 py-2 text-center font-medium text-white transition-colors hover:bg-green-700"
           >
             Sign up
           </motion.button>
           <motion.p variants={primaryVariants} className="text-xs">
             Already have an account?{" "}
-            <a className="text-indigo-600 underline" href="#">
+            <a className="text-green-600 underline" href="#">
               Sign in
             </a>
           </motion.p>
