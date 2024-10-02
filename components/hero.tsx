@@ -29,8 +29,8 @@ import {
   const Left = () => (
     <div className="col-span-12 flex flex-col justify-between border-r border-neutral-700 md:col-span-6">
       <div className="px-6 py-20 md:px-12 md:py-24">
-        <h1 className="text-4xl uppercase leading-tight md:text-5xl md:leading-tight">
-          <span className="text-emerald-300">Zero stress </span>
+        <h1 className="text-4xl uppercase  text-green-300 leading-tight md:text-5xl md:leading-tight">
+          <span className="text-amber-300">Zero stress </span>
           funnels for Ecommerce
         </h1>
       </div>
@@ -60,7 +60,7 @@ import {
       >
         <input
           type="email"
-          placeholder="Enter your email for a launch discount 🚀"
+          placeholder="Enter your email to Connnect with Us"
           className="w-full bg-transparent text-sm text-white placeholder-neutral-500 focus:outline-0"
         />
   
@@ -69,18 +69,18 @@ import {
           type="submit"
           className="group flex shrink-0 items-center gap-1.5 bg-emerald-300 px-4 py-3 text-sm font-medium text-neutral-900 transition-transform active:scale-[0.985]"
         >
-          <span>Join Waitlist</span>
+          <span>Join Farmopti</span>
           <FiArrowRight className="-mr-4 opacity-0 transition-all group-hover:-mr-0 group-hover:opacity-100" />
         </button>
   
-        <div className="pointer-events-none absolute inset-0 z-10">
+        {/* <div className="pointer-events-none absolute inset-0 z-10">
           <motion.div
             style={{
               backgroundImage,
             }}
             className="mask-with-browser-support absolute -inset-[1px] border border-transparent bg-origin-border"
           />
-        </div>
+        </div> */}
       </form>
     );
   };
