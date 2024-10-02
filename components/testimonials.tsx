@@ -7,7 +7,7 @@ const ScrollingTestimonials = () => {
         <h3 className="text-slate-900 text-4xl font-semibold text-center">
           Testimonials
         </h3>
-        <p className="text-center text-slate-900 text-sm mt-2 max-w-lg mx-auto">
+        <p className="text-center text-lg text-slate-900  mt-2 max-w-lg mx-auto">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
           consequatur reprehenderit.
         </p>
