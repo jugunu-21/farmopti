@@ -3,7 +3,7 @@ import Gradientbutton from "@/lib/ui/button";
 export default function Benefits() {
   return (
     <section className="text-gray-600 body-font">
-      <div className="container px-5 py-24 mx-auto">
+      <div className="container px-5 py-24 mx-auto ">
         <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
           <h1 className="sm:text-4xl  font-bold title-font mb-2 text-slate-900 text-2xl  ">
             Transform Your Farm with AI Technology
@@ -138,12 +138,12 @@ export default function Benefits() {
               </div>
               <h2 className="text-lg text-gray-900 font-medium title-font mb-2">Data-Driven Decisions</h2>
               <p className="leading-relaxed text-base">
-                Leverage our data analytics to make informed decisions on every aspect of your farm—from seeding to harvesting.
+              Leverage our data analytics to make informed decisions on every aspect of your farm—from seeding to harvesting,  and improving overall farm productivity."
               </p>
             </div>
           </div>
         </div>
-        <Gradientbutton text="Join Us" cta="contact" className="flex mx-auto mt-10 w-32" />
+        {/* <Gradientbutton text="Join Us" cta="contact" className="flex mx-auto mt-10 w-32" /> */}
       </div>
     </section>
   );
