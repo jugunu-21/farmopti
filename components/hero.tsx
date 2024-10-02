@@ -28,10 +28,18 @@ import {
   
   const Left = () => (
     <div className="col-span-12 flex flex-col justify-between border-r border-neutral-700 md:col-span-6">
-      <div className="px-6 py-20 md:px-12 md:py-24">
-        <h1 className="text-4xl uppercase  text-green-300 leading-tight md:text-5xl md:leading-tight">
-          <span className="text-amber-300">Zero stress </span>
-          funnels for Ecommerce
+      <div className="px-6 py-20 md:px-12 md:py-24" style={{
+                
+                    backgroundImage: "url('/Different Love.svg')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                  }
+                  
+                }>
+        <h1 className="text-2xl uppercase  text-green-300 leading-tight md:text-3xl md:leading-tight">
+          <span className="text-amber-300 ">AI-Powered Crop Insights </span>
+         for Sustainable Farming Success.
         </h1>
       </div>
       <BeamInput />
@@ -90,7 +98,7 @@ import {
   
     return (
       <div className="col-span-12 flex flex-col justify-between md:col-span-6">
-        <div className="relative h-[276px] overflow-hidden md:h-[372px]">
+        <div className="relative h-[276px] overflow-hidden md:h-[372px]" >
           {CONTENT.map((c, itemIdx) => {
             return (
               <motion.div
@@ -104,11 +112,18 @@ import {
                   ease: "easeInOut",
                   duration: 0.3,
                 }}
-                style={{
-                  pointerEvents: idx === itemIdx ? "all" : "none",
-                }}
+               
                 className="absolute inset-0 z-10 grid place-content-center space-y-3 px-6 text-base font-light leading-relaxed text-neutral-400 md:px-12 md:text-lg"
                 key={itemIdx}
+                style={{
+                  ...{
+                    backgroundImage: `url('${c.image}')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                  },
+                  pointerEvents: idx === itemIdx ? "all" : "none",
+                }}
               >
                 {c.content}
               </motion.div>
@@ -272,6 +287,7 @@ import {
           </p>
         </>
       ),
+      image:"/Jean Wimmerlin from Unsplash.jpg"
     },
     {
       content: (
@@ -286,6 +302,7 @@ import {
           </p>
         </>
       ),
+      image:"/Money Crops by Michelle Spollen.jpg"
     },
     {
       content: (
@@ -297,6 +314,7 @@ import {
           </p>
         </>
       ),
+      image:"/Satisfied Farmer Fields (1).jpg"
     },
     {
       content: (
@@ -309,5 +327,6 @@ import {
           </p>
         </>
       ),
+      image:"/Satisfied Farmer Fields.jpg"
     },
   ];
