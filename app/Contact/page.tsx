@@ -1,5 +1,5 @@
 "use client"
-import {SlideInAuth} from "@/components/comonent"
+import {SlideInAuth} from "@/components/contact"
 
 export default function ContactDashboard(){
     return(
