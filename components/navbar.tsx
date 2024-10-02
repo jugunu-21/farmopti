@@ -5,6 +5,7 @@ import { useAnimate, motion, AnimationScope } from "framer-motion";
 import { FiMenu, FiArrowUpRight } from "react-icons/fi";
 import useMeasure from "react-use-measure";
 import Link from "next/link";
+import Gradientbutton from "@/lib/ui/button";
 
 const Example = () => {
   return (
@@ -151,9 +152,7 @@ const Buttons = ({
       <SignInButton />
     </div> */}
 
-    <button className="relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-indigo-600 from-40% to-indigo-400 px-4 py-2 font-medium text-black transition-transform hover:scale-105 active:scale-95">
-      Sign In
-    </button>
+  <Gradientbutton text="Sign In"/>
 
     <button
       onClick={() => setMenuOpen((pv) => !pv)}
