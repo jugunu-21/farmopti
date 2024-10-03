@@ -143,7 +143,7 @@ export default function Benefits() {
             </div>
           </div>
         </div>
-        {/* <Gradientbutton text="Join Us" cta="contact" className="flex mx-auto mt-10 w-32" /> */}
+        <Gradientbutton text="Join Us" cta="contact" className=" flex mx-auto mt-10 w-32 justify-center " />
       </div>
     </section>
   );
