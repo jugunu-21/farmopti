@@ -11,7 +11,7 @@
 // export default nextConfig;
 const nextConfig = {
     experimental: {
-      fontOptimization: false,
+   
     },
     images: {
       domains: ['example.com', 'anotherdomain.com', 'aceternity.com','www.shutterstock.com','c7.alamy.com','api.dicebear.com',"unsplash.com/images",

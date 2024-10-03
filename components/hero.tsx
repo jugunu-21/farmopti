@@ -110,25 +110,31 @@ const squareData = [
     src: "/satisfiedfarmer.jpg",
   },
 ];
-
 const generateSquares = () => {
   return shuffle(squareData).map((sq) => (
     <motion.div
       key={sq.id}
       layout
       transition={{ duration: 1.5, type: "spring" }}
-      className="relative w-full h-full"
+      className="w-full h-full"
+      // style={{
+      //   backgroundImage: `url(${encodeURIComponent(sq.src)})`,
+      //   backgroundSize: "cover",
+      // }}
     >
-      <Image
+       <Image
         src={sq.src}
-        alt={`Square ${sq.id}`}
-        layout="fill"
-        objectFit="cover"
-        
+        alt={sq.src}
+        width={100} // Add this line
+  height={100} 
+        // layout="fill"
+        // objectFit="cover"
+        className="a w-full h-full "
       />
     </motion.div>
   ));
 };
+
 
 const ShuffleGrid = () => {
   const timeoutRef = useRef<any>(null);
