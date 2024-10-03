@@ -1,7 +1,8 @@
 import Gradientbutton from "@/lib/ui/button";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-
+import Image from 'next/image'; 
+import { SiRclone } from "react-icons/si";
 const ShuffleHero = () => {
   return (
     <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
@@ -46,7 +47,7 @@ const shuffle = (array: (typeof squareData)[0][]) => {
 const squareData = [
   {
     id: 1,
-    src: "/Agriculture Protest City new.jpg",
+    src: "/agriculture.jpg",
   },
   {
     id: 2,
@@ -94,11 +95,11 @@ const squareData = [
   },
   {
     id: 13,
-    src: "/Satisfied Farmer Fields new.jpg",
+    src: "/farmer.jpg",
   },
   {
     id: 14,
-    src: "/Money Crops by Michelle Spollen.jpg",
+    src: "/money.jpg",
   },
   {
     id: 15,
@@ -106,7 +107,7 @@ const squareData = [
   },
   {
     id: 16,
-    src: "/Satisfied Farmer Fields.jpg",
+    src: "/satisfiedfarmer.jpg",
   },
 ];
 
@@ -116,13 +117,14 @@ const generateSquares = () => {
       key={sq.id}
       layout
       transition={{ duration: 1.5, type: "spring" }}
-      className="w-full h-full "
-      style={{
-        backgroundImage: `url(${encodeURIComponent(sq.src)})`,
-        backgroundSize: "cover",
-      }}
+      className="relative w-full h-full"
     >
-      
+      <Image
+        src={sq.src}
+        alt={`Square ${sq.id}`}
+        layout="fill"
+        objectFit="cover"
+      />
     </motion.div>
   ));
 };
