@@ -130,6 +130,7 @@ const generateSquares = () => {
         // layout="fill"
         // objectFit="cover"
         className="a w-full h-full "
+         loading="lazy"
       />
     </motion.div>
   ));
