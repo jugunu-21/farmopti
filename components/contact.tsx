@@ -18,14 +18,14 @@ export default function Contact() {
         ></iframe>
       </div>
       <div className="container px-5 py-24 mx-auto flex">
-        <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
+        <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-2 shadow-md">
           <h2 className="text-gray-900 text-xl font-bold mb-1  title-font">Get in Touch</h2>
           <p className="leading-relaxed mb-5 text-gray-600">
             Have questions about how our AI-driven platform can help optimize your farm's yield,
           </p>
           <div className="relative mb-4">
             <label htmlFor="email" className="leading-7 text-lg font-semibold text-gray-600">
-              Your Email
+              Your email
             </label>
             <input
               type="email"
