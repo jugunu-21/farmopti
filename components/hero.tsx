@@ -124,7 +124,7 @@ const generateSquares = () => {
         alt={`Square ${sq.id}`}
         layout="fill"
         objectFit="cover"
-            placeholder="blur"
+        
       />
     </motion.div>
   ));
