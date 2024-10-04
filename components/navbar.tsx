@@ -151,7 +151,7 @@ const Buttons = ({
       <SignInButton />
     </div> */}
 
-    <Gradientbutton text="Sign In" cta="/signIn" />
+    <Gradientbutton text="Sign In" cta="/signin" />
 
     <button
       onClick={() => setMenuOpen((pv) => !pv)}
