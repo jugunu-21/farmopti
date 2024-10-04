@@ -19,7 +19,7 @@ const ShuffleHero = () => {
         {/* <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
           Start Optimizing Today
         </button> */}
-        <Gradientbutton text=" Start Optimizing Today" cta="contact" className=""/>
+        <Gradientbutton text=" Start Optimizing Today" cta="/contact" className=""/>
       </div>
       <ShuffleGrid />
     </section>
